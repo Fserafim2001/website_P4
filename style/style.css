@@ -84,7 +84,8 @@ header .titre {
 .restaurants .conteneur {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  column-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 
 .menu {
@@ -99,7 +100,8 @@ header .titre {
   height: 200px;
   border: 0 solid transparent;
   border-radius: 15px 15px 0 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .menu .menu__badge {
   padding: 10px;
@@ -124,6 +126,4 @@ header .titre {
 }
 .menu .menu__pied .menu__contenue .menu__sous-titre {
   margin: 0;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
