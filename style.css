@@ -1,0 +1,30 @@
+.barre {
+  padding: 1rem;
+  text-align: center;
+  background-color: rgb(254, 255, 254);
+}
+.barre .barre__titre {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 15px 20px;
+  background-color: violet;
+  border-radius: 50px;
+  color: white;
+}
+
+.tuto__elements {
+  margin: 0;
+  padding: 0;
+}
+.tuto__elements .tuto__element {
+  padding: 25px;
+  margin: 16px 0 16px 12px;
+  margin-top: 16px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
+  position: relative;
+}/*# sourceMappingURL=style.css.map */
