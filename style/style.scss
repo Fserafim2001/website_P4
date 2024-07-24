@@ -2,6 +2,8 @@
 $couleur-primaire: #9356dc;
 $couleur-secondaire: #ff79da;
 $couleur-terciaire: #99e2d0;
+*
+
 
 // Général
 body {
@@ -26,6 +28,9 @@ header {
     padding: 20px 16px;
     background-color: #f3f3f3;
     font-size: 16px;
+    i {
+        margin-right: 10px;
+    }
 }
 
 //Le hero
@@ -44,13 +49,13 @@ header {
     }
     .hero__btn {
         padding: 20px;
+        background-image: linear-gradient(0deg, $couleur-primaire, $couleur-secondaire);
     }
 }
 // Bouton général
 .btn {
     text-decoration: none;
     padding: 15px 20px;
-    background-color: $couleur-secondaire;
     border-radius: 50px;
     color: white;
     box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
@@ -72,12 +77,19 @@ header {
             box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
             border-radius: 20px;
             position: relative;
-            background-color: #f5f5f5;
+            background-color: #ffffff;
+            i {
+                margin: 0 15px 0 10px;
+            }
+            i:hover {
+                color: $couleur-primaire;
+            }
             .span {
                 color: #ffffff;
                 justify-content: center;
-                border-radius: 50%;
-                padding: 8px 12px;
+                border-radius: 100%;
+                padding: 6px 9px 4px 9px;
+                margin-top: 5px;
                 background-color: $couleur-primaire;
                 box-shadow: 0px 4px 15px 0px #00000026;
                 position: absolute;
@@ -87,9 +99,8 @@ header {
         }
     }
 }
-
 .restaurants {
-    background-color: #f6f6f6;
+    background-color: #ffffff;
     padding: 30px 15px;
     .conteneur {
         display: grid;
@@ -126,16 +137,49 @@ header {
         display: flex;
         align-items: center;
         position: relative;
-
+        i {
+            color: #ffffff;
+        }
+        i:hover {
+            color: $couleur-primaire;
+        }
         .menu__contenue {
             flex: 1;
-
             .menu__titre {
-                margin: 0;
+                margin: 0 0 5px 0;
             }
             .menu__sous-titre {
                 margin: 0;
             }
+        }
+    }
+}
+
+//le footer
+.footer {
+    background-color: #353535;
+    padding: 20px;
+    .conteneur__logo {
+        color: #ffffff;
+        font-family: Shrikhand, "cursive";
+        font-size: 25px;
+        padding: 0 0 30px 0;
+    }
+    .footer__liste {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 10px 0;
+        .footer__sous-liste {
+            margin: 10px 0;
+            margin-top: 10px;
+            i {
+                color: #ffffff;
+                margin-right: 10px;
+            }
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
         }
     }
 }
