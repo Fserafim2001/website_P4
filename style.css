@@ -145,12 +145,14 @@ header .titre {
 .footer {
   background-color: #353535;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 .footer .conteneur__logo {
   color: #ffffff;
   font-family: Shrikhand, "cursive";
   font-size: 25px;
-  padding: 0 0 30px 0;
+  padding: 0;
 }
 .footer .footer__liste {
   list-style: none;
@@ -160,10 +162,12 @@ header .titre {
 .footer .footer__liste .footer__sous-liste {
   margin: 10px 0;
   margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 .footer .footer__liste .footer__sous-liste i {
   color: #ffffff;
-  margin-right: 10px;
 }
 .footer .footer__liste a {
   color: #ffffff;
