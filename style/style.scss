@@ -1,189 +1,37 @@
-/*/ Variables de couleur /*/
-$couleur-primaire: #9356dc;
-$couleur-secondaire: #ff79da;
-$couleur-terciaire: #99e2d0;
-*
+// Les utils Variables
 
+@import "utilitaire/variables";
 
-// Général
 body {
     font-family: Roboto, sans-serif;
 }
 
-//le logo
-header {
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0px 2px 4px 0px #00000026;
-    .titre {
-        font-family: Shrikhand, "cursive";
-        margin: 0px;
-    }
-}
+@import "layout/header";
 
-//lieu
-.formulaire {
-    display: flex;
-    justify-content: center;
-    padding: 20px 16px;
-    background-color: #f3f3f3;
-    font-size: 16px;
-    i {
-        margin-right: 10px;
-    }
-}
+// La place
+@import "components/formulaires";
 
-//Le hero
-.hero {
-    text-align: center;
-    background-color: #fafafa;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    .hero__titre {
-        margin: 0px;
-    }
-    .hero__sous-titre {
-        margin: 25px 0;
-        font-weight: 300;
-    }
-    .hero__btn {
-        padding: 20px;
-        background-image: linear-gradient(0deg, $couleur-primaire, $couleur-secondaire);
-    }
-}
+// Le hero
+@import "components/hero";
+
 // Bouton général
-.btn {
-    text-decoration: none;
-    padding: 15px 20px;
-    border-radius: 50px;
-    color: white;
-    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-}
+@import "components/buttons";
 
-//section tuto
+// Section tuto
+@import "components/tuto";
 
-.tuto {
-    padding: 30px 15px;
+// Section restaurant
+@import "components/restaurants";
 
-    .tuto__elements {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        .tuto__element {
-            padding: 25px;
-            margin: 16px 0 16px 12px;
-            margin-top: 16px;
-            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
-            border-radius: 20px;
-            position: relative;
-            background-color: #ffffff;
-            i {
-                margin: 0 15px 0 10px;
-            }
-            i:hover {
-                color: $couleur-primaire;
-            }
-            .span {
-                color: #ffffff;
-                justify-content: center;
-                border-radius: 100%;
-                padding: 6px 9px 4px 9px;
-                margin-top: 5px;
-                background-color: $couleur-primaire;
-                box-shadow: 0px 4px 15px 0px #00000026;
-                position: absolute;
-                left: -16px;
-                top: 16px;
-            }
-        }
-    }
-}
-.restaurants {
-    background-color: #ffffff;
-    padding: 30px 15px;
-    .conteneur {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        column-gap: 30px;
-    }
-}
+// Le footer
+@import "layout/footer";
 
-.menu {
-    background-color: #fff;
-    border-radius: 16px;
-    text-decoration: none;
-    position: relative;
-    margin-bottom: 30px;
+@import "components/image";
 
-    .menu__image {
-        width: 100%;
-        height: 200px;
-        border: 0 solid transparent;
-        border-radius: 15px 15px 0 0;
-        object-fit: cover;
-    }
-    .menu__badge {
-        padding: 10px;
-        background-color: #99e2d0;
-        color: #1b6150;
-        border-radius: 5px;
-        position: absolute;
-        right: 20px;
-        margin-top: 20px;
-    }
-    .menu__pied {
-        padding: 15px;
-        display: flex;
-        align-items: center;
-        position: relative;
-        i {
-            color: #ffffff;
-        }
-        i:hover {
-            color: $couleur-primaire;
-        }
-        .menu__contenue {
-            flex: 1;
-            .menu__titre {
-                margin: 0 0 5px 0;
-            }
-            .menu__sous-titre {
-                margin: 0;
-            }
-        }
-    }
-}
+@import "buttons/coeur";
 
-//le footer
-.footer {
-    background-color: #353535;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    .conteneur__logo {
-        color: #ffffff;
-        font-family: Shrikhand, "cursive";
-        font-size: 25px;
-        padding: 0;
-    }
-    .footer__liste {
-        list-style: none;
-        padding: 0;
-        margin: 10px 0 10px 0;
-        .footer__sous-liste {
-            margin: 10px 0;
-            margin-top: 10px;
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            i {
-                color: #ffffff;
-            }
-        }
-        a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-    }
-}
+@import "menu/header";
+
+@import "menu/layout";
+
+@import "menu/choix";

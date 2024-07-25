@@ -1,0 +1,15 @@
+.carte {
+    background-color: #f6f6f6;
+    border-radius: 45px;
+    border: solid red 1px;
+}
+
+.carte__entrée--titre {
+    font-family: cursive;
+}
+
+.carte__entrée {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}

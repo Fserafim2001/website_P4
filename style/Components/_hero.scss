@@ -1,0 +1,22 @@
+.hero {
+    text-align: center;
+    background-color: #fafafa;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    .hero__titre {
+        margin: 0px;
+    }
+    .hero__sous-titre {
+        margin: 25px 0;
+        font-weight: 300;
+    }
+    a {
+        text-decoration-line: none;
+    }
+    .hero__btn {
+        padding: 15px;
+        background-image: linear-gradient(0deg, $couleur-primaire, $couleur-secondaire);
+        font-weight: 600;
+    }
+}
