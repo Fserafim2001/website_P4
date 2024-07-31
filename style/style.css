@@ -1,7 +1,11 @@
 @charset "UTF-8";
 /*/ Variables de couleur /*/
-body {
+.body {
   font-family: Roboto, sans-serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header {
@@ -17,6 +21,14 @@ header .titre {
   font-weight: 400;
   font-style: normal;
   margin: 0px;
+}
+
+.body {
+  margin: 0px;
+}
+
+main {
+  width: 100%;
 }
 
 .formulaire {
@@ -175,7 +187,7 @@ header .titre {
   gap: 10px;
 }
 .footer .footer__liste .footer__sous-liste i {
-  margin-right: 7px;
+  margin-right: 2px;
   width: 10px;
   height: auto;
   color: #ffffff;
@@ -189,10 +201,10 @@ header .titre {
   width: 100%;
 }
 
-.menu__pied i {
+.menu__pied .carte__titre i {
   font-weight: 100;
 }
-.menu__pied i:hover {
+.menu__pied .carte__titre i:hover {
   font-weight: 800;
   cursor: pointer;
   background-image: linear-gradient(0deg, #9356dc, #ff79da);
@@ -200,28 +212,32 @@ header .titre {
   color: transparent;
 }
 
-.carte__titre {
+.carte {
+  background-color: #f6f6f6;
+}
+.carte .carte__titre {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   margin: 40px 10px 20px 10px;
 }
-.carte__titre .titre {
+.carte .carte__titre .titre {
   font-family: "Shrikhand", serif;
   font-weight: 400;
-  font-style: normal;
   margin: 0px;
 }
 
 .carte {
   background-color: #f6f6f6;
-  border-radius: 45px;
+  border-radius: 40px;
   border: solid red 1px;
+  width: 100%;
+  margin-top: -40px;
 }
 
 .carte__entrée--titre {
-  font-family: cursive;
+  margin: 0px;
 }
 
 .carte__entrée {
@@ -231,13 +247,50 @@ header .titre {
 }
 
 .carte__entrée--element {
-  padding: 15px;
-  border: solid black 2px;
-  border-radius: 20px;
+  background-color: #fff;
+  padding: 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-size: 17px;
+  cursor: pointer;
+}
+.carte__entrée--element .entrée__description {
+  overflow: hidden;
 }
 .carte__entrée--element .entrée__titre {
+  font-size: 17px;
   margin: 0;
+  overflow: hidden;
 }
 .carte__entrée--element .entrée__sous-titre {
   margin: 0;
+  white-space: nowrap;
+}
+.carte__entrée--element .entrée__prix {
+  margin-top: 0px;
+  cursor: pointer;
+}
+.carte__entrée--element .prix_badge {
+  display: flex;
+  margin: 10px;
+}
+.carte__entrée--element .entrée__confirmation {
+  display: none;
+}
+
+.carte__entrée--element:hover .prix_badge {
+  display: inline;
+}
+.carte__entrée--element:hover .entrée__confirmation {
+  display: inline;
+  background-color: #99e2d0;
+  width: auto;
+}
+.carte__entrée--element:hover .entrée__confirmation i {
+  width: 1/5;
+  height: 100%;
+}
+.carte__entrée--element:hover .prix_badge {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

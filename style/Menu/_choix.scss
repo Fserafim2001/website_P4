@@ -1,11 +1,52 @@
 .carte__entrée--element {
-    padding: 15px;
-    border: solid black 2px;
-    border-radius: 20px;
+    background-color: #fff;
+    padding: 16px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 17px;
+    cursor: pointer;
+
+    .entrée__description {
+        overflow: hidden;
+    }
     .entrée__titre {
+        font-size: 17px;
         margin: 0;
+        overflow: hidden;
     }
     .entrée__sous-titre {
         margin: 0;
+        white-space: nowrap;
+    }
+    .entrée__prix {
+        margin-top: 0px;
+        cursor: pointer;
+    }
+    .prix_badge {
+        display: flex;
+        margin: 10px;
+    }
+    .entrée__confirmation {
+        display: none;
+    }
+}
+
+.carte__entrée--element:hover {
+    .prix_badge {
+        display: inline;
+    }
+    .entrée__confirmation {
+        display: inline;
+        background-color: $couleur-terciaire;
+
+        width: auto;
+        i {
+            width: 1/5;
+            height: 100%;
+        }
+    }
+    .prix_badge {
+        display: flex;
     }
 }

@@ -1,29 +1,25 @@
-// Les utils Variables
-
 @import "utilitaire/variables";
 
-body {
+.body {
     font-family: Roboto, sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 @import "layout/header";
 
-// La place
 @import "components/formulaires";
 
-// Le hero
 @import "components/hero";
 
-// Bouton général
 @import "components/buttons";
 
-// Section tuto
 @import "components/tuto";
 
-// Section restaurant
 @import "components/restaurants";
 
-// Le footer
 @import "layout/footer";
 
 @import "components/image";

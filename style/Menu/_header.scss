@@ -1,14 +1,16 @@
-.carte__titre {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    margin: 40px 10px 20px 10px;
+.carte {
+    background-color: #f6f6f6;
+    .carte__titre {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        margin: 40px 10px 20px 10px;
 
-    .titre {
-        font-family: "Shrikhand", serif;
-        font-weight: 400;
-        font-style: normal;
-        margin: 0px;
+        .titre {
+            font-family: "Shrikhand", serif;
+            font-weight: 400;
+            margin: 0px;
+        }
     }
 }
