@@ -1,0 +1,57 @@
+@media (min-width: 1000px) {
+    .menu__image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+    }
+    .tuto {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 10px 150px;
+
+        .tuto__elements {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 10px;
+            max-width: 1000px;
+            .tuto__element {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .restaurants {
+        padding: 10px 150px;
+    }
+    .conteneur__restaurants {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    //footer
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 20px;
+        padding: 10px;
+        .conteneur__logo {
+            margin: 20px;
+            margin-top: 55px;
+            font-size: 20px;
+        }
+        .footer__liste {
+            display: flex;
+            gap: 20px;
+            margin-top: 55px;
+            margin-left: 30px;
+        }
+    }
+}
+
+.conteneur__restaurants {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}

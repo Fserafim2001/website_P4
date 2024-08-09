@@ -2,10 +2,11 @@
 .restaurants {
     background-color: #f6f6f6;
     padding: 30px 15px;
-    .conteneur {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+
+    .conteneur__restaurants {
         column-gap: 30px;
+        padding: 0;
+
         .menu {
             background-color: #fff;
             border-radius: 16px;
@@ -13,6 +14,7 @@
             position: relative;
             margin-bottom: 30px;
             cursor: pointer;
+            color: inherit;
 
             .menu__image {
                 width: 100%;
@@ -35,6 +37,7 @@
                 display: flex;
                 align-items: center;
                 position: relative;
+
                 .menu__contenue {
                     flex: 1;
                     .menu__titre {

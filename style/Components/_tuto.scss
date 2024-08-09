@@ -1,10 +1,12 @@
 .tuto {
     padding: 30px 15px;
+    background-color: #ffffff;
 
     .tuto__elements {
         margin: 0;
         padding: 0;
         list-style: none;
+
         .tuto__element {
             padding: 25px;
             margin: 16px 0 16px 12px;
@@ -12,12 +14,13 @@
             box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
             border-radius: 20px;
             position: relative;
-            background-color: #ffffff;
+            background-color: #f6f6f6;
             i {
                 width: 10px;
                 height: auto;
                 margin-right: 15px;
                 color: #7e7e7e;
+                font-weight: 700 !important;
             }
             i:hover {
                 color: $couleur-primaire;

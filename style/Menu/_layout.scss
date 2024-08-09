@@ -1,17 +1,27 @@
 .carte {
-    background-color: #f6f6f6;
-    border-radius: 40px;
-    border: solid red 1px;
-    width: 100%;
-    margin-top: -40px;
-}
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
 
-.carte__entrée--titre {
-    margin: 0px;
+    width: 100%;
+    margin-top: -50px;
+    position: relative;
 }
 
 .carte__entrée {
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
+    .carte__entrée--titre {
+        font-size: 16px;
+        font-weight: 100;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+    .barre__verte {
+        width: 20px;
+        padding: 2px 10px;
+        background-color: $couleur-terciaire;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
 }

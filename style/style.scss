@@ -6,6 +6,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: black;
+    background-color: #eee;
+    font-size: 16px;
 }
 
 @import "layout/header";
@@ -31,3 +34,8 @@
 @import "menu/layout";
 
 @import "menu/choix";
+
+@import "Responsive/desktop";
+
+@import "Responsive/layout";
+@import "Responsive/menu";
