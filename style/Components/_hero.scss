@@ -4,6 +4,7 @@
     padding: 30px 25px;
     display: flex;
     flex-direction: column;
+
     .hero__titre {
         margin: 0px;
     }
@@ -19,5 +20,13 @@
         padding: 15px;
         background-image: linear-gradient(0deg, $couleur-primaire, $couleur-secondaire);
         font-weight: 600;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        transition: opacity 0.3s ease, box-shadow 0.3s ease;
+        opacity: 1;
+
+        &:hover {
+            opacity: 0.8;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+        }
     }
 }

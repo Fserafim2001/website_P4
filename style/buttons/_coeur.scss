@@ -1,5 +1,27 @@
 .menu__pied {
     i {
         font-weight: 100;
+        transition: background-image 0.5s ease;
+    }
+}
+
+.carte__titre {
+    i:hover {
+        font-weight: 800;
+        cursor: pointer;
+        background-image: linear-gradient(0deg, $couleur-primaire, $couleur-secondaire);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+.menu__btn {
+    font-weight: 400;
+
+    i:hover {
+        font-weight: 800;
+        cursor: pointer;
+        background-image: linear-gradient(0deg, $couleur-primaire, $couleur-secondaire);
+        -webkit-background-clip: text;
+        color: transparent;
     }
 }

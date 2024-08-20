@@ -67,6 +67,13 @@ main {
   padding: 15px;
   background-image: linear-gradient(0deg, #9356dc, #ff79da);
   font-weight: 600;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  opacity: 1;
+}
+.hero .hero__btn:hover {
+  opacity: 0.8;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn {
@@ -79,6 +86,7 @@ main {
 .tuto {
   padding: 30px 15px;
   background-color: #ffffff;
+  display: flex;
 }
 .tuto .tuto__elements {
   margin: 0;
@@ -210,6 +218,26 @@ main {
 
 .menu__pied i {
   font-weight: 100;
+  transition: background-image 0.5s ease;
+}
+
+.carte__titre i:hover {
+  font-weight: 800;
+  cursor: pointer;
+  background-image: linear-gradient(0deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.menu__btn {
+  font-weight: 400;
+}
+.menu__btn i:hover {
+  font-weight: 800;
+  cursor: pointer;
+  background-image: linear-gradient(0deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .carte {
@@ -246,6 +274,7 @@ main {
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 0;
+  transition: 1s;
 }
 .carte__entrée .barre__verte {
   width: 20px;
@@ -322,6 +351,9 @@ main {
   color: transparent;
 }
 
+.menu__btn {
+  font-weight: 400;
+}
 .menu__btn i:hover {
   font-weight: 800;
   cursor: pointer;
@@ -421,4 +453,120 @@ main {
     margin-top: -50px;
     position: relative;
   }
+}
+.carte__entrée--element {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.carte__entrée {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 500ms ease-out forwards;
+}
+
+.carte__entrée:nth-child(1) {
+  animation-delay: 200ms;
+}
+
+.carte__entrée:nth-child(2) {
+  animation-delay: 600ms;
+}
+
+.carte__entrée:nth-child(3) {
+  animation-delay: 1000ms;
+}
+
+.carte__entrée:nth-child(4) {
+  animation-delay: 1400ms;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.entrée__confirmation {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeSide 500ms ease forwards;
+}
+
+@keyframes fadeSide {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.logobg i {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeSide 500ms ease forwards;
+}
+
+@keyframes fadeSide {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+.carte__entrée--element {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 500ms ease-out forwards;
+}
+
+.carte__entrée--element:nth-child(1) {
+  animation-delay: 200ms;
+}
+
+.carte__entrée:nth-child(2) {
+  animation-delay: 600ms;
+}
+
+.carte__entrée:nth-child(3) {
+  animation-delay: 1000ms;
+}
+
+.carte__entrée:nth-child(4) {
+  animation-delay: 1400ms;
+}
+
+.menu__btn {
+  font-weight: 400;
+}
+.menu__btn i {
+  transition: font-weight 0.3s ease, background-image 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+.menu__btn i:hover {
+  font-weight: 800;
+  background-image: linear-gradient(0deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: scale(1.2);
 }/*# sourceMappingURL=style.css.map */
