@@ -1,16 +1,30 @@
 header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     position: relative;
     padding: 15px;
     text-align: center;
     box-shadow: 0px 2px 4px 0px #00000026;
+    i {
+        position: absolute;
+        left: 30px;
+        top: 25px;
+        display: flex;
+        font-size: 24px;
+        color: #000;
+    }
+
     .titre {
         font-family: "Shrikhand", serif;
         font-weight: 400;
         font-style: normal;
         margin: 0px;
     }
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }
 .body {
     margin: 0px;

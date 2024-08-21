@@ -3,48 +3,52 @@
     background-color: #f6f6f6;
     padding: 30px 15px;
 
-    .conteneur__restaurants {
+    .conteneur {
         column-gap: 30px;
         padding: 0;
-
-        .menu {
-            background-color: #fff;
-            border-radius: 16px;
-            text-decoration: none;
-            position: relative;
-            margin-bottom: 30px;
-            cursor: pointer;
-            color: inherit;
-
-            .menu__image {
-                width: 100%;
-                height: 200px;
-                border: 0 solid transparent;
-                border-radius: 15px 15px 0 0;
-                object-fit: cover;
-            }
-            .menu__badge {
-                padding: 10px;
-                background-color: #99e2d0;
-                color: #1b6150;
-                border-radius: 5px;
-                position: absolute;
-                right: 20px;
-                margin-top: 20px;
-            }
-            .menu__pied {
-                padding: 15px;
-                display: flex;
-                align-items: center;
+        .cards {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            .card {
+                background-color: #fff;
+                border-radius: 16px;
+                text-decoration: none;
                 position: relative;
+                margin-bottom: 30px;
+                cursor: pointer;
+                color: inherit;
 
-                .menu__contenue {
-                    flex: 1;
-                    .menu__titre {
-                        margin: 0 0 5px 0;
-                    }
-                    .menu__sous-titre {
-                        margin: 0;
+                .menu__image {
+                    width: 100%;
+                    height: 200px;
+                    border: 0 solid transparent;
+                    border-radius: 15px 15px 0 0;
+                    object-fit: cover;
+                }
+                .menu__badge {
+                    padding: 10px;
+                    background-color: #99e2d0;
+                    color: #1b6150;
+                    border-radius: 5px;
+                    position: absolute;
+                    right: 20px;
+                    margin-top: 20px;
+                }
+                .menu__pied {
+                    padding: 15px;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+
+                    .menu__contenue {
+                        flex: 1;
+                        .menu__titre {
+                            margin: 0 0 5px 0;
+                        }
+                        .menu__sous-titre {
+                            margin: 0;
+                        }
                     }
                 }
             }

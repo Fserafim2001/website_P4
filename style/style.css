@@ -13,17 +13,31 @@
 
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   position: relative;
   padding: 15px;
   text-align: center;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+header i {
+  position: absolute;
+  left: 30px;
+  top: 25px;
+  display: flex;
+  font-size: 24px;
+  color: #000;
 }
 header .titre {
   font-family: "Shrikhand", serif;
   font-weight: 400;
   font-style: normal;
   margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .body {
@@ -35,6 +49,7 @@ main {
 }
 
 .formulaire {
+  margin-left: 10px;
   display: flex;
   justify-content: center;
   padding: 20px 16px;
@@ -43,6 +58,16 @@ main {
 }
 .formulaire i {
   margin-right: 10px;
+}
+
+.placeholder {
+  border: none;
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 18px;
+  background-color: transparent;
+  width: 156px;
 }
 
 .hero {
@@ -87,13 +112,14 @@ main {
   padding: 30px 15px;
   background-color: #ffffff;
   display: flex;
+  flex-direction: column;
 }
-.tuto .tuto__elements {
+.tuto .conteneur .tuto__elements {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.tuto .tuto__elements .tuto__element {
+.tuto .conteneur .tuto__elements .tuto__element {
   padding: 25px;
   margin: 16px 0 16px 12px;
   margin-top: 16px;
@@ -102,17 +128,17 @@ main {
   position: relative;
   background-color: #f6f6f6;
 }
-.tuto .tuto__elements .tuto__element i {
+.tuto .conteneur .tuto__elements .tuto__element i {
   width: 10px;
   height: auto;
   margin-right: 15px;
   color: #7e7e7e;
   font-weight: 700 !important;
 }
-.tuto .tuto__elements .tuto__element i:hover {
+.tuto .conteneur .tuto__elements .tuto__element i:hover {
   color: #9356dc;
 }
-.tuto .tuto__elements .tuto__element .span {
+.tuto .conteneur .tuto__elements .tuto__element .span {
   color: #ffffff;
   justify-content: center;
   border-radius: 100%;
@@ -129,12 +155,17 @@ main {
   background-color: #f6f6f6;
   padding: 30px 15px;
 }
-.restaurants .conteneur__restaurants {
+.restaurants .conteneur {
   -moz-column-gap: 30px;
        column-gap: 30px;
   padding: 0;
 }
-.restaurants .conteneur__restaurants .menu {
+.restaurants .conteneur .cards {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.restaurants .conteneur .cards .card {
   background-color: #fff;
   border-radius: 16px;
   text-decoration: none;
@@ -143,7 +174,7 @@ main {
   cursor: pointer;
   color: inherit;
 }
-.restaurants .conteneur__restaurants .menu .menu__image {
+.restaurants .conteneur .cards .card .menu__image {
   width: 100%;
   height: 200px;
   border: 0 solid transparent;
@@ -151,7 +182,7 @@ main {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.restaurants .conteneur__restaurants .menu .menu__badge {
+.restaurants .conteneur .cards .card .menu__badge {
   padding: 10px;
   background-color: #99e2d0;
   color: #1b6150;
@@ -160,19 +191,19 @@ main {
   right: 20px;
   margin-top: 20px;
 }
-.restaurants .conteneur__restaurants .menu .menu__pied {
+.restaurants .conteneur .cards .card .menu__pied {
   padding: 15px;
   display: flex;
   align-items: center;
   position: relative;
 }
-.restaurants .conteneur__restaurants .menu .menu__pied .menu__contenue {
+.restaurants .conteneur .cards .card .menu__pied .menu__contenue {
   flex: 1;
 }
-.restaurants .conteneur__restaurants .menu .menu__pied .menu__contenue .menu__titre {
+.restaurants .conteneur .cards .card .menu__pied .menu__contenue .menu__titre {
   margin: 0 0 5px 0;
 }
-.restaurants .conteneur__restaurants .menu .menu__pied .menu__contenue .menu__sous-titre {
+.restaurants .conteneur .cards .card .menu__pied .menu__contenue .menu__sous-titre {
   margin: 0;
 }
 
@@ -377,7 +408,7 @@ main {
   display: flex;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
   .menu__image {
     width: 100%;
     max-height: 400px;
@@ -392,13 +423,17 @@ main {
     align-content: center;
     padding: 10px 150px;
   }
-  .tuto .tuto__elements {
+  .tuto .conteneur {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+  }
+  .tuto .conteneur .tuto__elements {
     display: grid;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 10px;
-    max-width: 1000px;
+    gap: 30px;
   }
-  .tuto .tuto__elements .tuto__element {
+  .tuto .conteneur .tuto__elements .tuto__element {
     padding-right: 0;
   }
   .restaurants {
@@ -425,18 +460,79 @@ main {
     margin-top: 55px;
     margin-left: 30px;
   }
+  .restaurants {
+    margin: 0;
+    align-content: center;
+    padding: 10px 150px;
+  }
+  .restaurants .conteneur {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .restaurants .conteneur .cards {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .restaurants .conteneur .cards .card {
+    background-color: #fff;
+    border-radius: 16px;
+    text-decoration: none;
+    position: relative;
+    margin-bottom: 30px;
+    cursor: pointer;
+    color: inherit;
+    width: auto;
+  }
+  .restaurants .conteneur .cards .card .menu__image {
+    width: 100%;
+    height: 200px;
+    border: 0 solid transparent;
+    border-radius: 15px 15px 0 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .restaurants .conteneur .cards .card .menu__badge {
+    padding: 10px;
+    background-color: #99e2d0;
+    color: #1b6150;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    margin-top: 20px;
+  }
+  .restaurants .conteneur .cards .card .menu__pied {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .restaurants .conteneur .cards .card .menu__pied .menu__contenue {
+    flex: 1;
+  }
+  .restaurants .conteneur .cards .card .menu__pied .menu__contenue .menu__titre {
+    margin: 0 0 5px 0;
+  }
+  .restaurants .conteneur .cards .card .menu__pied .menu__contenue .menu__sous-titre {
+    margin: 0;
+  }
 }
 .conteneur__restaurants {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
   header {
     background-color: #fff;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
   main {
     display: flex;
     flex-direction: column;
